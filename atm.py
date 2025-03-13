@@ -21,3 +21,19 @@ while True:
     if num =="4":
         print("종료 합니다.")
         break
+
+    if num =="2":
+        withdraw_amount = input("출금할 금액을 숫자로 입력해 주세요: ")
+        if withdraw_amount.isdigit() and int(withdraw_amount) > 0: #첫번째 조건 문자가 입력된건 아닌지 확인 / 0보다 큰 금액을 입력했는지
+            withdraw_amount = min(balance, int(withdraw_amount))
+            balance -= withdraw_amount
+            print(f"출금금액: {withdraw_amount}원 , 잔액: {balance}원 ")
+        else:
+            print("숫자만 기입하세요")    
+    
+
+    if num =="3":
+        pass
+    if num =="4":
+        print("종료 합니다.")
+        break
